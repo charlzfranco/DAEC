@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asteroides</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="menu">
+        <button id="playButton" class="ComenzarButton" onclick="cambiarFondoInicio(); mostrarDificultades()">
+            Comenzar
+        </button>        
+    </div>
+
+    <div id="submenu" style="display: none;">
+        <br><br><br><br><br><br>
+        <button id="facilButton" class="DificultadButton" onclick="elegirDificultad('facil')">
+            Fácil
+        </button>
+        <br>
+        <button id="medioButton" class="DificultadButton" onclick="elegirDificultad('medio')">
+            Medio
+        </button>
+        <br>
+        <button id="dificilButton" class="DificultadButton" onclick="elegirDificultad('dificil')">
+            Difícil
+        </button>
+    </div>
+    
+
+    <div id="confirmacion" style="display: none;">
+        <button id="startButton" class="MenuButton" onclick="iniciarJuego()">
+            Iniciar Juego
+        </button>
+        <br>
+        <button id="changeButton" class="MenuButton1" onclick="volverDificultades()">
+            Cambiar Dificultad
+        </button>        
+    </div>
+
+    <div id="gameOverMenu" style="display: none;">
+        <button id="restartButton" class="MenuButton3" onclick="detenerJuego(); reiniciarJuego()">Volver al Menú</button>
+    </div>
+    
+    <canvas id="gameCanvas" width="800" height="600" style="display: none;"></canvas>
+    <div id="preguntaDiv" style="display: none;"></div>
+    <script src="script.js"></script>
+</body>
+</html>
